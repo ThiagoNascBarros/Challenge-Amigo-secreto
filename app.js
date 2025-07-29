@@ -14,6 +14,20 @@ function adicionarAmigo() {
         amigos.push(entradaDoUsuario);
     }
 
+    atualizaLista();
     limparCaixa();
 }
 
+function atualizaLista() {
+    let lista = document.getElementById('listaAmigos');
+
+    lista.innerHTML = '';
+
+    for (let i = 0; i < amigos.length; i++) {
+        let amigo = document.createElement('li');
+
+        amigo.innerHTML = amigos[i];
+
+        lista.appendChild(amigo)
+    }
+}
