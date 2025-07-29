@@ -1,4 +1,5 @@
 let amigos = [];
+let amigosSorteados = [];
 
 function limparCaixa(id) {
     entradaDoUsuario = document.getElementById(id);
@@ -38,11 +39,20 @@ function sortearAmigo() {
     
     let amigoSecreto = Math.floor(Math.random() * amigos.length);
 
-    let resultadoDoSorteio = document.createElement('li');
+    if (amigosSorteados.length === amigos.length) {
+        amigosSorteados = []
+    }
 
-    resultadoDoSorteio.textContent = amigos[amigoSecreto];
+    if (amigosSorteados.includes(amigoSecreto)) {
+        amigoSecreto = sortearAmigo();
+    } else {
+        amigosSorteados.push(amigoSecreto);
+        let resultadoDoSorteio = document.createElement('li');
+        
+        resultadoDoSorteio.textContent = amigos[amigoSecreto];
+        resultado.appendChild(resultadoDoSorteio);
+            
+        console.log(amigoSecreto);
+    }
 
-    resultado.appendChild(resultadoDoSorteio);
-    
-    console.log(amigoSecreto);
 }
