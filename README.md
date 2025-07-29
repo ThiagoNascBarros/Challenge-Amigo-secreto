@@ -20,7 +20,7 @@
 - [Sobre o projeto](#sobre-o-projeto)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Funcionalidades da aplicação](#-funcionalidades-da-aplicação)
-- [Licença]()
+- [Licença](#licença)
 
 ## Sobre o Projeto
 
